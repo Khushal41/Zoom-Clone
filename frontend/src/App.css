@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
-}
+/* Enhanced CSS with new vibrant color scheme */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background: url("/public/background.png") center center/cover no-repeat;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
+}
+
+.landingPageContainer nav {
+  padding: 1.6rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(40, 40, 80, 0.8);
+  border-bottom: 2px solid #FF6F61;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.landingPageContainer nav h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #FF6F61;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.6rem;
+  cursor: pointer;
+}
+
+.landingPageContainer nav .navlist p {
+  font-size: 1.2rem;
+  color: #FFA07A;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.landingPageContainer nav .navlist p:hover {
+  color: #FF6F61;
+  transform: scale(1.1);
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  height: 80vh;
+  align-items: center;
+}
+
+.landingMainContainer>div:nth-child(1) {
+  font-size: 2.5rem;
+  color: #FFA07A;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] {
+  background: linear-gradient(45deg, #FF8C00, #FF4500);
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button']:hover {
+  background: linear-gradient(45deg, #FF4500, #FF8C00);
+  transform: scale(1.1);
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.landingMainContainer>div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.landingMainContainer>div:nth-child(2) img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  background: rgba(60, 60, 120, 0.8);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.meetContainer {
+  display: flex;
+  padding: 20px;
+  height: 80vh;
+  gap: 10vw;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+}
+
+.leftPanel {
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #FFA07A;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-.App-link {
-  color: #61dafb;
+.rightPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rightPanel>img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rightPanel>img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
