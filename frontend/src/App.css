@@ -1,10 +1,10 @@
-/* Enhanced CSS with new vibrant color scheme */
+/* Enhanced CSS with white and orange theme */
 
 .landingPageContainer {
   width: 100vw;
   height: 100vh;
   background: url("/public/background.png") center center/cover no-repeat;
-  color: #ffffff;
+  color: #333333;
   display: flex;
   flex-direction: column;
 }
@@ -14,16 +14,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(40, 40, 80, 0.8);
-  border-bottom: 2px solid #FF6F61;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid #FF6F00;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .landingPageContainer nav h2 {
   font-size: 2rem;
   font-weight: 600;
-  color: #FF6F61;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  color: #FF6F00;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .landingPageContainer nav .navlist {
@@ -34,12 +34,12 @@
 
 .landingPageContainer nav .navlist p {
   font-size: 1.2rem;
-  color: #FFA07A;
+  color: #FF8A33;
   transition: color 0.3s, transform 0.2s;
 }
 
 .landingPageContainer nav .navlist p:hover {
-  color: #FF6F61;
+  color: #FF6F00;
   transform: scale(1.1);
 }
 
@@ -53,22 +53,22 @@
 
 .landingMainContainer>div:nth-child(1) {
   font-size: 2.5rem;
-  color: #FFA07A;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  color: #FF8A33;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .landingMainContainer>div:nth-child(1) div[role='button'] {
-  background: linear-gradient(45deg, #FF8C00, #FF4500);
+  background: linear-gradient(45deg, #FFA726, #FF6F00);
   width: fit-content;
   padding: 1rem 2rem;
   border-radius: 20px;
   margin-top: 2rem;
   transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .landingMainContainer>div:nth-child(1) div[role='button']:hover {
-  background: linear-gradient(45deg, #FF4500, #FF8C00);
+  background: linear-gradient(45deg, #FF6F00, #FFA726);
   transform: scale(1.1);
 }
 
@@ -83,13 +83,13 @@
   height: 70vh;
   width: auto;
   border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .landingMainContainer>div:nth-child(2) img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navBar {
@@ -98,10 +98,10 @@
   justify-content: space-between;
   padding: 20px;
   text-align: center;
-  background: rgba(60, 60, 120, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .meetContainer {
@@ -121,9 +121,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFA07A;
+  color: #FF8A33;
   font-size: 1.5rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .rightPanel {
@@ -136,11 +136,11 @@
   width: 30vw;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .rightPanel>img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
