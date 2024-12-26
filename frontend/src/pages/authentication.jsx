@@ -19,58 +19,51 @@ import { Snackbar } from '@mui/material';
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
-// Import necessary modules and create a theme
 const defaultTheme = createTheme();
 
-// Exported Authentication component
 export default function Authentication() {
-    // State variables to store user input and related information
-    const [username, setUsername] = React.useState(); // Stores the username input
-    const [password, setPassword] = React.useState(); // Stores the password input
-    const [name, setName] = React.useState(); // Stores the name input (for registration)
-    const [error, setError] = React.useState(); // Tracks any errors during authentication
-    const [message, setMessage] = React.useState(); // Tracks success or informational messages
+
+
+
+    const [username, setUsername] = React.useState();
+    const [password, setPassword] = React.useState();
+    const [name, setName] = React.useState();
+    const [error, setError] = React.useState();
+    const [message, setMessage] = React.useState();
+
 
     const [formState, setFormState] = React.useState(0);
-    // Tracks the current form state: 0 for login, 1 for registration
 
-    const [open, setOpen] = React.useState(false);
-    // Controls whether a success/error message dialog is open
+    const [open, setOpen] = React.useState(false)
 
-    // Destructuring `handleRegister` and `handleLogin` from the authentication context
-    // AuthContext is expected to provide these methods for handling login and registration
+
     const { handleRegister, handleLogin } = React.useContext(AuthContext);
 
-    // Function to handle the authentication process (either login or registration)
     let handleAuth = async () => {
         try {
             if (formState === 0) {
-                // If the form is in login state
-                let result = await handleLogin(username, password);
-                // Calls the login function with the username and password
+
+                let result = await handleLogin(username, password)
+
+
             }
             if (formState === 1) {
-                // If the form is in registration state
                 let result = await handleRegister(name, username, password);
-                console.log(result); // Logs the registration result for debugging
-                setUsername(""); // Clears the username input field
-                setMessage(result); // Sets a success message
-                setOpen(true); // Opens the success message dialog
-                setError(""); // Clears any previous errors
-                setFormState(0); // Resets the form state to login
-                setPassword(""); // Clears the password input field
+                console.log(result);
+                setUsername("");
+                setMessage(result);
+                setOpen(true);
+                setError("")
+                setFormState(0)
+                setPassword("")
             }
         } catch (err) {
-            // Handles errors during the authentication process
-            console.log(err); // Logs the error for debugging
-            let message = err.response.data.message; // Extracts the error message from the response
-            setError(message); // Sets the error message to be displayed
+
+            console.log(err);
+            let message = (err.response.data.message);
+            setError(message);
         }
-    };
-
-    // Return or render logic for the component goes here (not provided in this snippet)
-
-
+    }
 
 
     return (
@@ -83,7 +76,7 @@ export default function Authentication() {
                     sm={4}
                     md={7}
                     sx={{
-                        backgroundImage: 'url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+                        backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
