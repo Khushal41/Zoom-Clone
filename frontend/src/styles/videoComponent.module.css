@@ -11,6 +11,13 @@
     width: auto;
     left: 0;
     border-radius: 20px;
+    transition: transform 0.3s ease;
+    /* Smooth scaling effect */
+}
+
+.meetUserVideo:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the video on hover */
 }
 
 .buttonContainers {
@@ -22,21 +29,35 @@
 
 .buttonContainers svg {
     font-size: 3rem;
+    transition: color 0.3s ease;
+    /* Smooth color change */
 }
 
-.conferenceView { 
+.buttonContainers svg:hover {
+    color: #ff5733;
+    /* Change icon color on hover */
+}
 
+.conferenceView {
     display: flex;
-    
     padding: 10px;
     gap: 10px;
 }
 
-.conferenceView  video {
+.conferenceView video {
     width: 40vw;
     height: 20vh;
     min-width: 30vw;
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth scaling and shadow effect */
+}
+
+.conferenceView video:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the video on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Add a shadow to make the hover effect more prominent */
 }
 
 .chatRoom {
@@ -47,13 +68,19 @@
     border-radius: 10px;
     width: 30vw;
     padding-inline: 20px;
+    transition: transform 0.3s ease;
+    /* Smooth slide-in effect */
+}
+
+.chatRoom:hover {
+    transform: translateX(-5px);
+    /* Slightly move the chatroom to the left on hover */
 }
 
 .chatContainer {
     position: relative;
     height: 100%;
 }
-
 
 .chattingArea {
     position: absolute;
