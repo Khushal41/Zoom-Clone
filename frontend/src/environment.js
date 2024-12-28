@@ -1,6 +1,6 @@
 let IS_PROD = true;
 const server = IS_PROD ?
-    "https://apna-video-call-hjsx.onrender.com" :
+    "https://zoom-clone-backend-kflw.onrender.com" :
 
     "http://localhost:8000"
 
