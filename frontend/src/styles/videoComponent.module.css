@@ -1,9 +1,13 @@
+/* Main Container */
 .meetVideoContainer {
     position: relative;
     height: 100vh;
     background: rgb(1, 4, 48);
+    background-image: linear-gradient(135deg, rgba(1, 4, 48, 0.8), rgba(1, 4, 48, 0.6));
+    /* Gradient for added depth */
 }
 
+/* User Video */
 .meetUserVideo {
     position: absolute;
     bottom: 10vh;
@@ -11,37 +15,47 @@
     width: auto;
     left: 0;
     border-radius: 20px;
-    transition: transform 0.3s ease;
-    /* Smooth scaling effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth scaling and shadow effect */
 }
 
 .meetUserVideo:hover {
-    transform: scale(1.05);
-    /* Slightly enlarge the video on hover */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Slightly enlarge with shadow on hover for depth */
 }
 
+/* Button Containers */
 .buttonContainers {
     position: absolute;
     width: 100vw;
-    bottom: 0;
+    bottom: 20px;
     text-align: center;
+    z-index: 2;
+    /* Ensure buttons are above content */
 }
 
 .buttonContainers svg {
     font-size: 3rem;
-    transition: color 0.3s ease;
-    /* Smooth color change */
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #ffffff;
+    /* Initial icon color */
 }
 
 .buttonContainers svg:hover {
     color: #ff5733;
-    /* Change icon color on hover */
+    transform: scale(1.2);
+    /* Change color and enlarge icon on hover */
 }
 
+/* Conference View */
 .conferenceView {
     display: flex;
     padding: 10px;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center videos in container */
 }
 
 .conferenceView video {
@@ -49,40 +63,60 @@
     height: 20vh;
     min-width: 30vw;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth scaling and shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    /* Smooth scaling, shadow, and filter effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Initial subtle shadow */
 }
 
 .conferenceView video:hover {
     transform: scale(1.05);
-    /* Slightly enlarge the video on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Add a shadow to make the hover effect more prominent */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+    /* Slightly brighten the video on hover */
 }
 
+/* Chat Room */
 .chatRoom {
     position: absolute;
     height: 90vh;
     right: 0;
-    background: white;
+    background: #fff;
+    background-image: linear-gradient(135deg, #ffbb33, #ff5733);
     border-radius: 10px;
     width: 30vw;
     padding-inline: 20px;
-    transition: transform 0.3s ease;
-    /* Smooth slide-in effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth slide-in effect and shadow */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .chatRoom:hover {
-    transform: translateX(-5px);
-    /* Slightly move the chatroom to the left on hover */
+    transform: translateX(-8px);
+    box-shadow: -8px 0 25px rgba(0, 0, 0, 0.3);
+    /* Add depth and subtle shift on hover */
 }
 
+/* Chat Container */
 .chatContainer {
     position: relative;
     height: 100%;
 }
 
+/* Chatting Area */
 .chattingArea {
     position: absolute;
     bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+/* Chatting Area Hover Effect */
+.chattingArea:hover {
+    background: rgba(0, 0, 0, 0.7);
+    /* Darken background for focus when hovered */
 }
