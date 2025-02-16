@@ -3,6 +3,8 @@ import bcrypt, { hash } from "bcrypt";
 import { User } from "../models/user.model.js";
 import crypto from "crypto";
 import { Meeting } from "../models/meeting.model.js"
+
+
 const login = async (req, res) => {
   const { username, password } = req.body;
 
@@ -12,7 +14,7 @@ const login = async (req, res) => {
 
   try {
     const user = await User.findOne({ username });
-    console.log(user);
+    // console.log(user);
     if (!user) {
       return res
         .status(httpStatus.NOT_FOUND)
@@ -33,8 +35,6 @@ const login = async (req, res) => {
       return res.status(httpStatus.UNAUTHORIZED).json({ message: "Invalid Username or Password" })
     }
 
-
-
   } catch (e) {
     return res.status(500).json({ message: `Something went wrong ${e}` });
   }
@@ -50,7 +50,7 @@ const register = async (req, res) => {
     if (existingUser) {
       return res
         .status(httpStatus.FOUND)
-        .json({ message: "User allready exists" });
+        .json({ message: "User already exists" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
