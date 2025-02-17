@@ -1,0 +1,30 @@
+### Login
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "testpassword"
+}
+
+### Register
+POST http://localhost:8000/register
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "password": "newpassword",
+  "email": "newuser@example.com"
+}
+
+### Add to Activities
+POST http://localhost:8000/add_to_activities
+Content-Type: application/json
+
+{
+  "userId": "user123",
+  "activity": "Joined a meeting"
+}
+
+### Get All Activities
+GET http://localhost:8000/get_all_activities?userId=user123
